@@ -48,5 +48,11 @@ main .city i{
     border: none;
     border-radius: 2rem;
     box-shadow: 2px 1px 16px -3px #000000;
-    background-image: linear-gradient(to top, #ff79da ,#9356DC);
+    background-image: linear-gradient(to top,#9356dc,#ff79da);
+    transition: transform 200ms;
+    margin-top: 1rem;
+}
+.explorer button:hover{
+    transform: scale(1.02);
+    opacity: 0.9;
 }
