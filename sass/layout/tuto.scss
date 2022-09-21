@@ -1,0 +1,28 @@
+@import"../utils/zoom.scss";
+.tuto{
+    counter-reset: steps;
+    & ol{
+        display: flex;
+        gap: 1rem ;
+        @media (max-width: 800px){
+            flex-direction: column;
+        }
+    }
+    & li{
+        &::before{
+            content: "";
+        }
+        background-color: #f6f6f6;
+        padding: 1.5rem 2rem;
+        flex-grow: 1;
+        border-radius: 1rem;
+        @include base-shadow;
+        &:hover{
+            @include transform-zoom;
+        }
+        & i.fas{
+            margin-right: 1rem;
+        }
+
+    }
+}
