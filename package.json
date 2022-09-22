@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DRIDIaurelie/ohmyfood.git"
+  },
+  "author": "DRIDI Aurelie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DRIDIaurelie/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/DRIDIaurelie/ohmyfood#readme"
+}
