@@ -9,9 +9,11 @@
         }
     }
     & li{
-        &::before{
-            content: "";
+        & ::before{
+            content: counter (steps);
+            counter-increment: steps;
         }
+        list-style-type: none;
         background-color: #f6f6f6;
         padding: 1.5rem 2rem;
         flex-grow: 1;
