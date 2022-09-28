@@ -1,0 +1,89 @@
+@use"../utils/variables.scss";
+@use"../utils/colors.scss";
+@use"../utils/linear-gradient.scss";
+
+.menus {
+    background-color: #f6F6F6;
+    margin-bottom: 2rem;
+    h2{
+        margin-bottom: 2rem;
+
+    }
+
+    .menus_cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        @media (max-width: variables.$breakpoint) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .new{
+            position: relative;
+        }
+        .new::before{
+            content: "Nouveau";
+            position: absolute;
+            height: 2rem;
+            width: 5rem;
+            background-color: colors.$color-tertiary;
+            color:darken($color: colors.$color-tertiary, $amount: 50%);
+            display: grid;
+            place-items: center;
+            right: 1rem;
+            top: 1rem;
+
+        }
+    }
+    .card {
+        & .card__image{
+            height: 15rem;
+            border-radius: 1rem 1rem 0 0;
+            background-size: cover;
+        }
+    
+        & .card__image-1{
+            background-image: url(../../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg)    
+        }
+
+        & .card__image-2{
+            background-image: url(../../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg)    
+        }
+        & .card__image-3{
+            background-image: url(../../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg)    
+        }
+        & .card__image-4{
+            background-image: url(../../images/stil-u2Lp8tXIcjw-unsplash.jpg)    
+        }
+        &__description{
+            position: relative;
+            background-color: white;
+            border-radius: 0 0 1rem 1rem;
+            h3,
+            p{
+                padding: 0.3rem;
+                
+            
+            }
+            i{
+                font-size: 2rem;
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .fas {
+                color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+                @include linear-gradient.gradient(1);
+            }
+            &:hover .fas{
+                opacity: 1;
+                transform: translateY(-50%) scale(1.2);
+            }
+
+        }
+    }
+} 

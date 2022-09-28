@@ -13,5 +13,22 @@ body{
 
 }
 main{
-    padding: 0 1 rem;
+    padding: 0 7 rem;
+    @media (max-widht:1000px){
+        padding: 0.1rem;
+    }
+}
+
+h2{
+    padding: 2rem;
+    margin: 0;
+
+}
+h3, 
+p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
 }

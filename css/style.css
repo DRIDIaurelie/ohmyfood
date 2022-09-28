@@ -12,7 +12,27 @@ body {
 }
 
 main {
-  padding: 0 1 rem;
+  padding: 0 7 rem;
+}
+@media (max-widht: 1000px) {
+  main {
+    padding: 0.1rem;
+  }
+}
+
+h2 {
+  padding: 2rem;
+  margin: 0;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 header {
@@ -53,10 +73,10 @@ header {
   padding: 1rem, 2rem;
   border: none;
   border-radius: 2rem;
-  background-image: linear-gradient(to top, #9356dc, #ff79da);
   transition: transform 200ms;
   margin-top: 1rem;
   box-shadow: 2px 1px 16px -3px #000000;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 .explorer button:hover {
   transform: scale(1.02);
@@ -65,10 +85,11 @@ header {
 
 .tuto {
   counter-reset: steps;
+  margin-bottom: 2rem;
 }
 .tuto ol {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 @media (max-width: 800px) {
   .tuto ol {
@@ -76,6 +97,7 @@ header {
   }
 }
 .tuto li {
+  position: relative;
   list-style-type: none;
   background-color: #f6f6f6;
   padding: 1.5rem 2rem;
@@ -84,14 +106,119 @@ header {
   box-shadow: 2px 1px 16px -3px #000000;
 }
 .tuto li ::before {
-  content: counter steps;
+  content: counter(steps);
   counter-increment: steps;
+  color: white;
+  background-color: #9356dc;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  transform: translateY(-50%);
 }
 .tuto li:hover {
   transform: scale(1.02);
 }
 .tuto li i.fas {
   margin-right: 1rem;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.menus {
+  background-color: #f6F6F6;
+  margin-bottom: 2rem;
+}
+.menus h2 {
+  margin-bottom: 2rem;
+}
+.menus .menus_cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .menus .menus_cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.menus .menus_cards .new {
+  position: relative;
+}
+.menus .menus_cards .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99e2D0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+}
+.menus .card .card__image {
+  height: 15rem;
+  border-radius: 1rem 1rem 0 0;
+  background-size: cover;
+}
+.menus .card .card__image-1 {
+  background-image: url(../../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+.menus .card .card__image-2 {
+  background-image: url(../../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+.menus .card .card__image-3 {
+  background-image: url(../../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+.menus .card .card__image-4 {
+  background-image: url(../../images/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+.menus .card__description {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+.menus .card__description h3,
+.menus .card__description p {
+  padding: 0.3rem;
+}
+.menus .card__description i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menus .card__description .fas {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+.menus .card__description:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
+footer {
+  background-color: #353535;
+  padding: 1rem 2rem;
+  color: white;
+}
+footer h2 {
+  font-family: "shrikhand", "sans-serif";
+  font-weight: 500;
+  padding: 1rem 0;
+}
+footer p {
+  padding: 0.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
