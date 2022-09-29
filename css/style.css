@@ -70,7 +70,7 @@ header {
   color: white;
   font-weight: 300;
   font-size: 1.5rem;
-  padding: 1rem, 2rem;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
   transition: transform 200ms;
@@ -183,18 +183,40 @@ header {
   background-color: white;
   border-radius: 0 0 1rem 1rem;
 }
-.menus .card__description h3,
-.menus .card__description p {
-  padding: 0.3rem;
-}
-.menus .card__description i {
+.menus .card__description::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font Awesome 5 free";
+  font-weight: 400;
+  content: "\f004";
   font-size: 2rem;
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
 }
-.menus .card__description .fas {
+.menus .card__description::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font Awesome 5 free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -202,9 +224,13 @@ header {
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
 }
-.menus .card__description:hover .fas {
+.menus .card__description:hover::after {
   opacity: 1;
-  transform: translateY(-50%) scale(1.2);
+  transform: translateY(-50%) scale(1.1);
+}
+.menus .card__description h3,
+.menus .card__description p {
+  padding: 0.3rem;
 }
 
 footer {
@@ -221,4 +247,61 @@ footer p {
   padding: 0.2rem;
 }
 
-/*# sourceMappingURL=style.css.map */
+img {
+  max-width: 100%;
+}
+
+.resto__main {
+  padding: 0 1rem;
+}
+.resto__main h2 {
+  font-family: "Shrikhland";
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+.resto__main h2::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font Awesome 5 free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+.resto__main h2::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font Awesome 5 free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+.resto__main h2:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}/*# sourceMappingURL=style.css.map */

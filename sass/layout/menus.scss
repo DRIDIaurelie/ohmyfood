@@ -1,6 +1,6 @@
 @use"../utils/variables.scss";
 @use"../utils/colors.scss";
-@use"../utils/linear-gradient.scss";
+@use"../utils/mixins.scss";
 
 .menus {
     background-color: #f6F6F6;
@@ -55,35 +55,13 @@
             background-image: url(../../images/stil-u2Lp8tXIcjw-unsplash.jpg)    
         }
         &__description{
-            position: relative;
-            background-color: white;
-            border-radius: 0 0 1rem 1rem;
+            @include mixins.heart-animated;
             h3,
             p{
                 padding: 0.3rem;
                 
             
             }
-            i{
-                font-size: 2rem;
-                position: absolute;
-                right: 1rem;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            .fas {
-                color: transparent;
-                background-clip: text;
-                -webkit-background-clip: text;
-                opacity: 0;
-                transition: all 200ms ease-in-out;
-                @include linear-gradient.gradient(1);
-            }
-            &:hover .fas{
-                opacity: 1;
-                transform: translateY(-50%) scale(1.2);
-            }
-
         }
     }
 } 

@@ -12,13 +12,13 @@
   color: white;
   font-weight: 300;
   font-size: 1.5rem;
-  padding: 1rem, 2rem;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
   transition: transform 200ms;
   margin-top: 1rem;
   box-shadow: 2px 1px 16px -3px #000000;
-  background-image: linear-gradient(to top, #9356dc 147, 86, 220, 0.9, #ff79da 255, 121, 218, 0.9);
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 .explorer button:hover {
   transform: scale(1.02);

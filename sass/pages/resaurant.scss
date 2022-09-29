@@ -1,0 +1,13 @@
+@use"../utils/mixins.scss";
+
+img{
+    max-width: 100%;
+}
+
+.resto__main {
+    padding: 0 1rem;
+    h2 {
+        font-family: "Shrikhland";
+        @include mixins.heart-animated;
+  }
+}
