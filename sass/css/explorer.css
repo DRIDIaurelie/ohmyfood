@@ -4,9 +4,13 @@
 .explorer h2 {
   margin-top: 2rem;
   font-size: 2rem;
+  padding: 1.5rem;
 }
 .explorer p {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  color: grey;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
 }
 .explorer button {
   color: white;
@@ -17,7 +21,7 @@
   border-radius: 2rem;
   transition: transform 200ms;
   margin-top: 1rem;
-  box-shadow: 2px 1px 16px -3px #000000;
+  box-shadow: 2px 1px 16px -3px black;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 .explorer button:hover {

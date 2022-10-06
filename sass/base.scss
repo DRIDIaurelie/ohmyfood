@@ -19,16 +19,19 @@ main{
     }
 }
 
-h2{
-    padding: 2rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
     margin: 0;
 
 }
-h3, 
-p{
-    margin: 0;
-}
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }

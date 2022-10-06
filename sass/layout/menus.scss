@@ -2,15 +2,13 @@
 @use"../utils/colors.scss";
 @use"../utils/mixins.scss";
 
-.menus {
-    background-color: #f6F6F6;
-    margin-bottom: 2rem;
-    h2{
-        margin-bottom: 2rem;
+#pageaccueil{
 
-    }
-
-    .menus_cards{
+    .menus {
+        background-color: #f6F6F6;
+        margin-bottom: 2rem;          
+     }
+        .menus_cards{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -34,34 +32,34 @@
 
         }
     }
-    .card {
-        & .card__image{
-            height: 15rem;
-            border-radius: 1rem 1rem 0 0;
-            background-size: cover;
-        }
-    
-        & .card__image-1{
-            background-image: url(../../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg)    
-        }
+            .card {
+            & .card__image{
+                height: 15rem;
+                border-radius: 1rem 1rem 0 0;
+                background-size: cover;
+            }
 
-        & .card__image-2{
-            background-image: url(../../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg)    
-        }
-        & .card__image-3{
-            background-image: url(../../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg)    
-        }
-        & .card__image-4{
-            background-image: url(../../images/stil-u2Lp8tXIcjw-unsplash.jpg)    
-        }
-        &__description{
-            @include mixins.heart-animated;
-            h3,
-            p{
-                padding: 0.3rem;
+            & .card__image-1{
+                background-image: url(../../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg)    
+            }
+
+            & .card__image-2{
+                background-image: url(../../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg)    
+            }
+            & .card__image-3{
+                background-image: url(../../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg)    
+            }
+            & .card__image-4{
+                background-image: url(../../images/stil-u2Lp8tXIcjw-unsplash.jpg)    
+            }
+            &__description{
+                @include mixins.heart-animated;
+                h3,
+                p{
+                    padding: 0.3rem;
                 
-            
+                
             }
         }
     }
-} 
+}

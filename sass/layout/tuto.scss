@@ -15,7 +15,7 @@
     }
     & li{
         position: relative;
-        & ::before {
+        &::before {
             content:counter(steps);
             counter-increment: steps;
             color: white;
@@ -41,8 +41,9 @@
         }
         & i.fas{
             margin-right: 1rem;
-            color:colors.$lightgrey;
+            color: grey;
             font-size: 1.5rem;
+            
         }
 
     }

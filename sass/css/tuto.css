@@ -18,9 +18,9 @@
   padding: 1.5rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
-  box-shadow: 2px 1px 16px -3px #000000;
+  box-shadow: 2px 1px 16px -3px black;
 }
-.tuto li ::before {
+.tuto li::before {
   content: counter(steps);
   counter-increment: steps;
   color: white;
@@ -40,6 +40,6 @@
 }
 .tuto li i.fas {
   margin-right: 1rem;
-  color: black;
+  color: grey;
   font-size: 1.5rem;
 }/*# sourceMappingURL=tuto.css.map */

@@ -1,24 +1,21 @@
-.menus {
+#pageaccueil .menus {
   background-color: #f6F6F6;
   margin-bottom: 2rem;
 }
-.menus h2 {
-  margin-bottom: 2rem;
-}
-.menus .menus_cards {
+#pageaccueil .menus_cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 @media (max-width: 1000px) {
-  .menus .menus_cards {
+  #pageaccueil .menus_cards {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.menus .menus_cards .new {
+#pageaccueil .menus_cards .new {
   position: relative;
 }
-.menus .menus_cards .new::before {
+#pageaccueil .menus_cards .new::before {
   content: "Nouveau";
   position: absolute;
   height: 2rem;
@@ -30,29 +27,29 @@
   right: 1rem;
   top: 1rem;
 }
-.menus .card .card__image {
+#pageaccueil .card .card__image {
   height: 15rem;
   border-radius: 1rem 1rem 0 0;
   background-size: cover;
 }
-.menus .card .card__image-1 {
+#pageaccueil .card .card__image-1 {
   background-image: url(../../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
-.menus .card .card__image-2 {
+#pageaccueil .card .card__image-2 {
   background-image: url(../../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
-.menus .card .card__image-3 {
+#pageaccueil .card .card__image-3 {
   background-image: url(../../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
 }
-.menus .card .card__image-4 {
+#pageaccueil .card .card__image-4 {
   background-image: url(../../images/stil-u2Lp8tXIcjw-unsplash.jpg);
 }
-.menus .card__description {
+#pageaccueil .card__description {
   position: relative;
   background-color: white;
   border-radius: 0 0 1rem 1rem;
 }
-.menus .card__description::before {
+#pageaccueil .card__description::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -72,7 +69,7 @@
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
-.menus .card__description::after {
+#pageaccueil .card__description::after {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -93,11 +90,11 @@
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
 }
-.menus .card__description:hover::after {
+#pageaccueil .card__description:hover::after {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
 }
-.menus .card__description h3,
-.menus .card__description p {
+#pageaccueil .card__description h3,
+#pageaccueil .card__description p {
   padding: 0.3rem;
 }/*# sourceMappingURL=menus.css.map */
