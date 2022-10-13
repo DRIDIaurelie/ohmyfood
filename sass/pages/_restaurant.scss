@@ -1,7 +1,7 @@
-@use"../utils/mixins.scss";
-@use"../utils/variables.scss";
-@use"../utils/colors.scss";
-@use"../utils/animations.scss";
+@use"../utils/mixins";
+@use"../utils/variables";
+@use"../utils/colors";
+@use"../utils/animations";
 
 body {
     background-color: colors.$lightergrey;
@@ -10,6 +10,14 @@ body {
 
 
 #page-lapalette {
+    header:before {
+        @include mixins.font-awesome (900);
+        content: "\f060";
+        left: 32px;
+        top: 37%;
+        transform:translateY (-50%);
+        font-size: 20px;
+    }
     .banner img {
         display: block;
         width: 100%;
@@ -43,6 +51,8 @@ body {
             text-transform: uppercase;
             font-weight: 400;
             position: relative;
+            margin-bottom: 15px;
+            margin-left: 11px;
             &:after {
                 content:"";
                 position: absolute;
@@ -56,13 +66,21 @@ body {
         }
         .menu_category {
             overflow: hidden;
+
             .menu-item {
+                @for $i from 2 through 4 {
+                    &:nth-child(#{$i}) {
+                        animation-delay: 100ms * $i;
+                    }
+                }
                 display: flex;               
                 background-color: white;
                 border-radius: 1rem;
                 overflow: hidden;
                 margin: 0.5rem;
-                @include mixins.base-shadow;                
+                @include mixins.base-shadow;
+                animation: appear 3s;   
+                animation-fill-mode: both;             
                 .menu-item-price {
                     margin-left: auto;
                     font-weight: 900;
@@ -99,11 +117,11 @@ body {
                         border-radius: 1rem;
                         color: colors.$color-tertiary;
                     }
-                }               
+                } 
                 &:hover{
+                    cursor: pointer;           
                     .menu-item-check {
                         margin-right: 0;
-                    
                     }  
                     i {
                         animation: quarter-spin 0.5s ease-in-out;
@@ -115,11 +133,13 @@ body {
         }
     }
     section.order{
-        height: 30vh;
+        height: 180px;
         display: grid;
         place-items: center;
         button{
             @include mixins.base-button;
+            margin-top: -109px;
+            margin-bottom: -129px;
         }
     }
 }

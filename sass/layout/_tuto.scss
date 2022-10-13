@@ -1,11 +1,19 @@
-@use"../utils/mixins.scss";
-@use"../utils/variables.scss";
-@use"../utils/colors.scss";
+@use"../utils/mixins";
+@use"../utils/variables";
+@use"../utils/colors";
 
 
 .tuto{
     counter-reset: steps;
     margin-bottom: 2rem;
+    background-color: white;
+    margin-top: 15px;
+    padding-top: 25px;
+    h2{
+        margin-top: 20px;
+        margin-left: 23px;
+        margin-bottom: 19px;
+    }
     & ol{
         display: flex;
         gap: 2rem ;
@@ -20,8 +28,8 @@
             counter-increment: steps;
             color: white;
             background-color: colors.$purple;
-            width: 2 * variables.$tuto-bullet-height;
-            height: 2 * variables.$tuto-bullet-height;
+            width: 22px;
+            height: 22px;
             display: grid;
             place-items: center;
             border-radius: 50%;
@@ -35,16 +43,21 @@
         padding: 1.5rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
+        margin-right: 15px;
         @include mixins.base-shadow;
         &:hover{
             @include mixins.transform-zoom;
+            background-color: #f5ecff;
         }
-        & i.fas{
-            margin-right: 1rem;
+              
+        & i.fa{
+            margin-right: 10px;
             color: grey;
-            font-size: 1.5rem;
-            
+            font-size: 17px;
         }
-
+        i.fa:hover {
+            color: #9156db;
+        }
+        
     }
 }

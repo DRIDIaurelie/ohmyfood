@@ -8,6 +8,7 @@
 }
 
 body {
+  margin: 0px;
   font-family: "roboto", sans-serif;
 }
 
@@ -42,9 +43,14 @@ header {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   padding: 0.3rem;
   position: relative;
+  margin: 0px;
+  margin: -4px -11px 0px -12px;
 }
 header h1 {
   font-weight: normal;
+  padding: 15px;
+  font-size: 35px;
+  background-color: white;
 }
 
 .city {
@@ -52,38 +58,42 @@ header h1 {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background-color: #ece9e9;
+  background-color: #f3f3f3;
   text-align: center;
-  padding: 0.3rem;
+  padding: 20px;
+  font-size: 14px;
 }
 .city i {
-  font-size: 1.5rem;
+  font-size: 20px;
 }
 
 .explorer {
   text-align: center;
+  background-color: #fafafa;
 }
 .explorer h2 {
-  margin-top: 2rem;
-  font-size: 2rem;
-  padding: 1.5rem;
+  margin-top: 10px;
+  font-size: 24px;
+  padding: 20px;
 }
 .explorer p {
-  font-size: 1.5rem;
+  font-size: 16px;
   color: grey;
-  padding-bottom: 1.5rem;
-  padding-left: 1rem;
+  padding-bottom: 25px;
+  padding-left: 10px;
 }
 .explorer button {
   color: white;
   font-weight: 300;
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
+  font-size: 20px;
+  padding: 10px 15px;
   border: none;
   border-radius: 2rem;
   transition: transform 200ms;
-  margin-top: 1rem;
-  box-shadow: 2px 1px 16px -3px black;
+  margin-top: 32px;
+  margin-bottom: 45px;
+  cursor: pointer;
+  box-shadow: 5px 3px 8px -4px darkgrey;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 .explorer button:hover {
@@ -91,9 +101,41 @@ header h1 {
   opacity: 0.9;
 }
 
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 1s 5s forwards;
+  transform-origin: top;
+}
+.loader i {
+  color: #9356dc;
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 .tuto {
   counter-reset: steps;
   margin-bottom: 2rem;
+  background-color: white;
+  margin-top: 15px;
+  padding-top: 25px;
+}
+.tuto h2 {
+  margin-top: 20px;
+  margin-left: 23px;
+  margin-bottom: 19px;
 }
 .tuto ol {
   display: flex;
@@ -111,15 +153,16 @@ header h1 {
   padding: 1.5rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
-  box-shadow: 2px 1px 16px -3px black;
+  margin-right: 15px;
+  box-shadow: 5px 3px 8px -4px darkgrey;
 }
 .tuto li::before {
   content: counter(steps);
   counter-increment: steps;
   color: white;
   background-color: #9356dc;
-  width: 2rem;
-  height: 2rem;
+  width: 22px;
+  height: 22px;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -130,21 +173,29 @@ header h1 {
 }
 .tuto li:hover {
   transform: scale(1.02);
+  background-color: #f5ecff;
 }
-.tuto li i.fas {
-  margin-right: 1rem;
+.tuto li i.fa {
+  margin-right: 10px;
   color: grey;
-  font-size: 1.5rem;
+  font-size: 17px;
+}
+.tuto li i.fa:hover {
+  color: #9156db;
 }
 
 #pageaccueil .menus {
   background-color: #f6F6F6;
   margin-bottom: 2rem;
 }
+#pageaccueil .menus h2 {
+  margin-left: 27px;
+}
 #pageaccueil .menus_cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  margin: 10px 1px 10px 27px;
 }
 @media (max-width: 1000px) {
   #pageaccueil .menus_cards {
@@ -170,6 +221,7 @@ header h1 {
   height: 15rem;
   border-radius: 1rem 1rem 0 0;
   background-size: cover;
+  margin-top: 7px;
 }
 #pageaccueil .card .card__image-1 {
   background-image: url(../../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
@@ -190,6 +242,7 @@ header h1 {
 }
 #pageaccueil .card__description::before {
   display: inline-block;
+  position: absolute;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
@@ -198,7 +251,6 @@ header h1 {
   font-weight: 400;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
@@ -210,6 +262,7 @@ header h1 {
 }
 #pageaccueil .card__description::after {
   display: inline-block;
+  position: absolute;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
@@ -218,7 +271,6 @@ header h1 {
   font-weight: 900;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
@@ -260,10 +312,35 @@ footer p {
     transform: rotate(0);
   }
 }
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY 0;
+    opacity: 1;
+  }
+}
 body {
   background-color: #F6F6F6;
 }
 
+#page-lapalette header:before {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font Awesome 5 free";
+  font-weight: 900;
+  content: "\f060";
+  left: 32px;
+  top: 37%;
+  transform: translateY -50%;
+  font-size: 20px;
+}
 #page-lapalette .banner img {
   display: block;
   width: 100%;
@@ -285,6 +362,7 @@ body {
 }
 #page-lapalette .resto-title h2::before {
   display: inline-block;
+  position: absolute;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
@@ -293,7 +371,6 @@ body {
   font-weight: 400;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
@@ -305,6 +382,7 @@ body {
 }
 #page-lapalette .resto-title h2::after {
   display: inline-block;
+  position: absolute;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
@@ -313,7 +391,6 @@ body {
   font-weight: 900;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
@@ -345,6 +422,8 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   position: relative;
+  margin-bottom: 15px;
+  margin-left: 11px;
 }
 #page-lapalette .menus h3:after {
   content: "";
@@ -364,7 +443,18 @@ body {
   border-radius: 1rem;
   overflow: hidden;
   margin: 0.5rem;
-  box-shadow: 2px 1px 16px -3px black;
+  box-shadow: 5px 3px 8px -4px darkgrey;
+  animation: appear 3s;
+  animation-fill-mode: both;
+}
+#page-lapalette .menus .menu_category .menu-item:nth-child(2) {
+  animation-delay: 200ms;
+}
+#page-lapalette .menus .menu_category .menu-item:nth-child(3) {
+  animation-delay: 300ms;
+}
+#page-lapalette .menus .menu_category .menu-item:nth-child(4) {
+  animation-delay: 400ms;
 }
 #page-lapalette .menus .menu_category .menu-item .menu-item-price {
   margin-left: auto;
@@ -402,6 +492,9 @@ body {
   border-radius: 1rem;
   color: #99e2D0;
 }
+#page-lapalette .menus .menu_category .menu-item:hover {
+  cursor: pointer;
+}
 #page-lapalette .menus .menu_category .menu-item:hover .menu-item-check {
   margin-right: 0;
 }
@@ -409,19 +502,27 @@ body {
   animation: quarter-spin 0.5s ease-in-out;
 }
 #page-lapalette section.order {
-  height: 30vh;
+  height: 180px;
   display: grid;
   place-items: center;
 }
 #page-lapalette section.order button {
   color: white;
   font-weight: 300;
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
+  font-size: 20px;
+  padding: 10px 15px;
   border: none;
   border-radius: 2rem;
   transition: transform 200ms;
-  margin-top: 1rem;
-  box-shadow: 2px 1px 16px -3px black;
+  margin-top: 32px;
+  margin-bottom: 45px;
+  cursor: pointer;
+  box-shadow: 5px 3px 8px -4px darkgrey;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  margin-top: -109px;
+  margin-bottom: -129px;
+}
+#page-lapalette section.order button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }/*# sourceMappingURL=style.css.map */

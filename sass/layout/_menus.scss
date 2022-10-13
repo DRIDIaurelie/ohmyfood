@@ -1,17 +1,21 @@
-@use"../utils/variables.scss";
-@use"../utils/colors.scss";
-@use"../utils/mixins.scss";
+@use"../utils/variables";
+@use"../utils/colors";
+@use"../utils/mixins";
 
 #pageaccueil{
 
     .menus {
         background-color: #f6F6F6;
-        margin-bottom: 2rem;          
-     }
-        .menus_cards{
+        margin-bottom: 2rem;  
+        h2{
+            margin-left: 27px;
+        }
+    }
+    .menus_cards{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+        margin: 10px 1px 10px 27px;
         @media (max-width: variables.$breakpoint) {
             grid-template-columns: repeat(1, 1fr);
         }
@@ -29,14 +33,15 @@
             place-items: center;
             right: 1rem;
             top: 1rem;
-
+            
         }
     }
-            .card {
-            & .card__image{
+    .card {      
+        & .card__image{
                 height: 15rem;
                 border-radius: 1rem 1rem 0 0;
                 background-size: cover;
+                margin-top: 7px;
             }
 
             & .card__image-1{
