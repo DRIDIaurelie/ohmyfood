@@ -17,19 +17,23 @@
     & ol{
         display: flex;
         gap: 2rem ;
+        margin: 0 30px 0 45px;
+        padding: 0;
         @media (max-width: 800px){
             flex-direction: column;
         }
     }
     & li{
         position: relative;
+        display: flex;
+        align-items: center;
         &::before {
             content:counter(steps);
             counter-increment: steps;
-            color: white;
-            background-color: colors.$purple;
             width: 22px;
             height: 22px;
+            color: white;
+            background-color: colors.$purple;
             display: grid;
             place-items: center;
             border-radius: 50%;
@@ -48,6 +52,9 @@
         &:hover{
             @include mixins.transform-zoom;
             background-color: #f5ecff;
+            i::before{
+                color: colors.$purple;
+            }
         }
               
         & i.fa{
@@ -55,9 +62,7 @@
             color: grey;
             font-size: 17px;
         }
-        i.fa:hover {
-            color: #9156db;
-        }
+        
         
     }
 }

@@ -13,7 +13,7 @@ body {
 }
 
 main {
-  padding: 0 7 rem;
+  padding: 0, 7rem;
 }
 @media (max-widht: 1000px) {
   main {
@@ -41,10 +41,9 @@ header {
   font-family: "shrikhand", "cursive";
   text-align: center;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-  padding: 0.3rem;
   position: relative;
-  margin: 0px;
-  margin: -4px -11px 0px -12px;
+  margin: 0;
+  padding: 0;
 }
 header h1 {
   font-weight: normal;
@@ -140,6 +139,8 @@ header h1 {
 .tuto ol {
   display: flex;
   gap: 2rem;
+  margin: 0 30px 0 45px;
+  padding: 0;
 }
 @media (max-width: 800px) {
   .tuto ol {
@@ -148,6 +149,8 @@ header h1 {
 }
 .tuto li {
   position: relative;
+  display: flex;
+  align-items: center;
   list-style-type: none;
   background-color: #f6f6f6;
   padding: 1.5rem 2rem;
@@ -159,10 +162,10 @@ header h1 {
 .tuto li::before {
   content: counter(steps);
   counter-increment: steps;
-  color: white;
-  background-color: #9356dc;
   width: 22px;
   height: 22px;
+  color: white;
+  background-color: #9356dc;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -175,13 +178,13 @@ header h1 {
   transform: scale(1.02);
   background-color: #f5ecff;
 }
+.tuto li:hover i::before {
+  color: #9356dc;
+}
 .tuto li i.fa {
   margin-right: 10px;
   color: grey;
   font-size: 17px;
-}
-.tuto li i.fa:hover {
-  color: #9156db;
 }
 
 #pageaccueil .menus {
@@ -190,12 +193,13 @@ header h1 {
 }
 #pageaccueil .menus h2 {
   margin-left: 27px;
+  margin: 20px;
 }
 #pageaccueil .menus_cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  margin: 10px 1px 10px 27px;
+  margin: 20px;
 }
 @media (max-width: 1000px) {
   #pageaccueil .menus_cards {
@@ -222,18 +226,19 @@ header h1 {
   border-radius: 1rem 1rem 0 0;
   background-size: cover;
   margin-top: 7px;
+  background-position: center;
 }
 #pageaccueil .card .card__image-1 {
-  background-image: url(../../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-image: url(../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
 #pageaccueil .card .card__image-2 {
-  background-image: url(../../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-image: url(../images/stil-u2Lp8tXIcjw-unsplash.jpg);
 }
 #pageaccueil .card .card__image-3 {
-  background-image: url(../../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-image: url(../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
 }
 #pageaccueil .card .card__image-4 {
-  background-image: url(../../images/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-image: url(../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
 #pageaccueil .card__description {
   position: relative;
@@ -318,7 +323,7 @@ footer p {
     opacity: 0;
   }
   100% {
-    transform: translateY 0;
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -337,8 +342,8 @@ body {
   font-weight: 900;
   content: "\f060";
   left: 32px;
-  top: 37%;
-  transform: translateY -50%;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 20px;
 }
 #page-lapalette .banner img {
@@ -346,7 +351,7 @@ body {
   width: 100%;
   height: 70vh;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center;
 }
 #page-lapalette .resto-title {
   margin-top: -2rem;
@@ -354,6 +359,7 @@ body {
 #page-lapalette .resto-title h2 {
   font-family: "Shrikhand", "cursive";
   padding: 2rem 1rem;
+  font-weight: normal;
   position: relative;
   background-color: white;
   border-radius: 0 0 1rem 1rem;
@@ -444,17 +450,38 @@ body {
   overflow: hidden;
   margin: 0.5rem;
   box-shadow: 5px 3px 8px -4px darkgrey;
-  animation: appear 3s;
+  animation: appear 400ms;
   animation-fill-mode: both;
 }
-#page-lapalette .menus .menu_category .menu-item:nth-child(2) {
+#page-lapalette .menus .menu_category .menu-item:nth-of-type(1) {
   animation-delay: 200ms;
 }
-#page-lapalette .menus .menu_category .menu-item:nth-child(3) {
-  animation-delay: 300ms;
-}
-#page-lapalette .menus .menu_category .menu-item:nth-child(4) {
+#page-lapalette .menus .menu_category .menu-item:nth-of-type(2) {
   animation-delay: 400ms;
+}
+#page-lapalette .menus .menu_category .menu-item:nth-of-type(3) {
+  animation-delay: 600ms;
+}
+#page-lapalette .menus .menu_category .menu-item:nth-of-type(4) {
+  animation-delay: 800ms;
+}
+#page-lapalette .menus .menu_category .menu-item:nth-of-type(5) {
+  animation-delay: 1000ms;
+}
+#page-lapalette .menus .menu_category .menu-item:nth-of-type(6) {
+  animation-delay: 1200ms;
+}
+#page-lapalette .menus .menu_category .menu-item:nth-of-type(7) {
+  animation-delay: 1400ms;
+}
+#page-lapalette .menus .menu_category .menu-item:nth-of-type(8) {
+  animation-delay: 1600ms;
+}
+#page-lapalette .menus .menu_category .menu-item:nth-of-type(9) {
+  animation-delay: 1800ms;
+}
+#page-lapalette .menus .menu_category .menu-item:nth-of-type(10) {
+  animation-delay: 2000ms;
 }
 #page-lapalette .menus .menu_category .menu-item .menu-item-price {
   margin-left: auto;
@@ -487,8 +514,8 @@ body {
   display: grid;
   place-items: center;
   background: white;
-  aspect-ratio: 1;
-  width: 2rem;
+  height: 1rem;
+  width: 1rem;
   border-radius: 1rem;
   color: #99e2D0;
 }
@@ -519,8 +546,6 @@ body {
   cursor: pointer;
   box-shadow: 5px 3px 8px -4px darkgrey;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  margin-top: -109px;
-  margin-bottom: -129px;
 }
 #page-lapalette section.order button:hover {
   transform: scale(1.02);

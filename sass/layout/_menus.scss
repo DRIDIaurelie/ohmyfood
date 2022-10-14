@@ -9,13 +9,14 @@
         margin-bottom: 2rem;  
         h2{
             margin-left: 27px;
+            margin: 20px;
         }
     }
     .menus_cards{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-        margin: 10px 1px 10px 27px;
+        margin: 20px;
         @media (max-width: variables.$breakpoint) {
             grid-template-columns: repeat(1, 1fr);
         }
@@ -42,20 +43,21 @@
                 border-radius: 1rem 1rem 0 0;
                 background-size: cover;
                 margin-top: 7px;
+                background-position: center;
             }
 
             & .card__image-1{
-                background-image: url(../../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg)    
+                background-image: url(../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg)    
             }
 
             & .card__image-2{
-                background-image: url(../../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg)    
+                background-image: url(../images/stil-u2Lp8tXIcjw-unsplash.jpg)    
             }
             & .card__image-3{
-                background-image: url(../../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg)    
+                background-image: url(../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg)    
             }
             & .card__image-4{
-                background-image: url(../../images/stil-u2Lp8tXIcjw-unsplash.jpg)    
+                background-image: url(../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg)    
             }
             &__description{
                 @include mixins.heart-animated;
