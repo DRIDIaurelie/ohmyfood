@@ -4,7 +4,7 @@
 @use"../utils/animations";
 
 body {
-    background-color: colors.$lightergrey;
+    background-color: colors.$color-two;
 }
 
 
@@ -34,7 +34,7 @@ body {
         font-weight: normal;
         @include mixins.heart-animated;
         border-radius: 2rem 2rem 0 0;
-        background-color: colors.$lightergrey;
+        background-color: colors.$color-two;
         }
     }
     .resto-main {

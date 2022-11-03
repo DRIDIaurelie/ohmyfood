@@ -33,7 +33,7 @@
             width: 22px;
             height: 22px;
             color: white;
-            background-color: colors.$purple;
+            background-color: colors.$color-primary;
             display: grid;
             place-items: center;
             border-radius: 50%;
@@ -53,7 +53,7 @@
             @include mixins.transform-zoom;
             background-color: #f5ecff;
             i::before{
-                color: colors.$purple;
+                color: colors.$color-primary;
             }
         }
               
