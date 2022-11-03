@@ -13,7 +13,7 @@ body {
 }
 
 main {
-  padding: 0, 7rem;
+  padding: 0;
 }
 @media (max-widht: 1000px) {
   main {
@@ -126,7 +126,7 @@ header h1 {
 }
 .tuto {
   counter-reset: steps;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   background-color: white;
   margin-top: 15px;
   padding-top: 25px;
